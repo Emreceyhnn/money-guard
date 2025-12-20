@@ -180,7 +180,7 @@ export default function LoginPage() {
                     Log In
                   </StyledFadeButton>
 
-                  <StyledWhiteButton variant="outlined">
+                  <StyledWhiteButton variant="outlined" href="/register">
                     Register
                   </StyledWhiteButton>
                 </Stack>

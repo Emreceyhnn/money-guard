@@ -51,6 +51,7 @@ export default function IncomeForm({ onClose }) {
               <Field
                 component={StyledTextField}
                 name="amount"
+                required
                 label="Amount"
                 type="number"
                 variant="filled"
@@ -86,6 +87,7 @@ export default function IncomeForm({ onClose }) {
               <Field
                 component={StyledTextField}
                 name="date"
+                required
                 label="Date"
                 type="date"
                 variant="filled"
@@ -124,6 +126,7 @@ export default function IncomeForm({ onClose }) {
             <Field
               component={StyledTextField}
               name="comment"
+              required
               label="Comment"
               variant="filled"
               fullWidth

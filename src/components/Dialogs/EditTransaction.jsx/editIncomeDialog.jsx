@@ -58,6 +58,7 @@ export default function EditIncome({ onClose, value }) {
                 name="amount"
                 label="Amount"
                 type="number"
+                required
                 variant="filled"
                 sx={{
                   maxWidth: { md: 181, xs: "100%" },
@@ -93,6 +94,7 @@ export default function EditIncome({ onClose, value }) {
                 name="transactionDate"
                 label="Date"
                 type="date"
+                required
                 variant="filled"
                 InputLabelProps={{ shrink: true }}
                 sx={{
@@ -129,6 +131,7 @@ export default function EditIncome({ onClose, value }) {
             <Field
               component={StyledTextField}
               name="comment"
+              required
               label="Comment"
               variant="filled"
               fullWidth

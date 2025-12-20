@@ -65,6 +65,7 @@ export default function EditExpense({ onClose, value }) {
             <Field
               component={StyledTextField}
               name="categoryName"
+              required
               label="Category"
               variant="filled"
               InputProps={{ readOnly: true }}
@@ -100,6 +101,7 @@ export default function EditExpense({ onClose, value }) {
               <Field
                 component={StyledTextField}
                 name="amount"
+                required
                 label="Amount"
                 type="number"
                 variant="filled"
@@ -136,6 +138,7 @@ export default function EditExpense({ onClose, value }) {
                 component={StyledTextField}
                 name="transactionDate"
                 label="Date"
+                required
                 type="date"
                 variant="filled"
                 InputLabelProps={{ shrink: true }}
@@ -174,6 +177,7 @@ export default function EditExpense({ onClose, value }) {
               component={StyledTextField}
               name="comment"
               label="Comment"
+              required
               variant="filled"
               fullWidth
               sx={{

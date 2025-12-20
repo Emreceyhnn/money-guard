@@ -66,6 +66,7 @@ export default function ExpenseForm({ onClose }) {
             <FormControl fullWidth variant="filled">
               <Field
                 component={Select}
+                required
                 name="categoryId"
                 variant="filled"
                 sx={{
@@ -148,6 +149,7 @@ export default function ExpenseForm({ onClose }) {
             >
               <Field
                 component={StyledTextField}
+                required
                 name="amount"
                 label="Amount"
                 type="number"
@@ -157,6 +159,7 @@ export default function ExpenseForm({ onClose }) {
 
               <Field
                 component={StyledTextField}
+                required
                 name="date"
                 label="Date"
                 type="date"
@@ -169,6 +172,7 @@ export default function ExpenseForm({ onClose }) {
             {/* COMMENT */}
             <Field
               component={StyledTextField}
+              required
               name="comment"
               label="Comment"
               variant="filled"
