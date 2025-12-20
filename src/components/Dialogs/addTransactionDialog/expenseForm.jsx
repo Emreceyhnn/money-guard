@@ -70,6 +70,8 @@ export default function ExpenseForm({ onClose }) {
                 name="categoryId"
                 variant="filled"
                 sx={{
+                  width: 400,
+
                   backgroundColor: "transparent",
                   borderBottom: "1px solid #fff !important",
                   color: "#fff",
@@ -133,6 +135,9 @@ export default function ExpenseForm({ onClose }) {
                       "&:hover": {
                         backgroundColor: "rgba(255,255,255,0.1)",
                       },
+                      "& .MuiSelect-icon": {
+                        color: "#fff",
+                      },
                     }}
                   >
                     {item.name}
@@ -154,7 +159,33 @@ export default function ExpenseForm({ onClose }) {
                 label="Amount"
                 type="number"
                 variant="filled"
-                sx={{ maxWidth: { md: 181, xs: "100%" } }}
+                sx={{
+                  maxWidth: { md: 181, xs: "100%" },
+                  mt: 2,
+                  "& .MuiInputLabel-root": {
+                    color: "rgba(255,255,255,0.8)",
+                  },
+
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+
+                  "& .MuiInputLabel-root.Mui-error": {
+                    color: "#ff6b6b",
+                  },
+
+                  "& .MuiFilledInput-underline:before": {
+                    borderBottomColor: "rgba(255,255,255,0.6)",
+                  },
+
+                  "& .MuiFilledInput-underline:hover:before": {
+                    borderBottomColor: "#fff",
+                  },
+
+                  "& .MuiFilledInput-underline:after": {
+                    borderBottomColor: "#fff",
+                  },
+                }}
               />
 
               <Field
@@ -165,7 +196,38 @@ export default function ExpenseForm({ onClose }) {
                 type="date"
                 variant="filled"
                 InputLabelProps={{ shrink: true }}
-                sx={{ width: 400 }}
+                sx={{
+                  maxWidth: { md: 181, xs: "100%" },
+                  mt: 2,
+                  "& .MuiInputLabel-root": {
+                    color: "rgba(255,255,255,0.8)",
+                  },
+
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+
+                  "& .MuiInputLabel-root.Mui-error": {
+                    color: "#ff6b6b",
+                  },
+
+                  "& .MuiFilledInput-underline:before": {
+                    borderBottomColor: "rgba(255,255,255,0.6)",
+                  },
+
+                  "& .MuiFilledInput-underline:hover:before": {
+                    borderBottomColor: "#fff",
+                  },
+
+                  "& .MuiFilledInput-underline:after": {
+                    borderBottomColor: "#fff",
+                  },
+                  "& input::-webkit-calendar-picker-indicator": {
+                    filter: "invert(1)",
+                    opacity: 1,
+                    cursor: "pointer",
+                  },
+                }}
               />
             </Stack>
 
@@ -177,6 +239,33 @@ export default function ExpenseForm({ onClose }) {
               label="Comment"
               variant="filled"
               fullWidth
+              sx={{
+                width: 400,
+                mt: 2,
+                "& .MuiInputLabel-root": {
+                  color: "rgba(255,255,255,0.8)",
+                },
+
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#fff",
+                },
+
+                "& .MuiInputLabel-root.Mui-error": {
+                  color: "#ff6b6b",
+                },
+
+                "& .MuiFilledInput-underline:before": {
+                  borderBottomColor: "rgba(255,255,255,0.6)",
+                },
+
+                "& .MuiFilledInput-underline:hover:before": {
+                  borderBottomColor: "#fff",
+                },
+
+                "& .MuiFilledInput-underline:after": {
+                  borderBottomColor: "#fff",
+                },
+              }}
             />
 
             {/* BUTTONS */}

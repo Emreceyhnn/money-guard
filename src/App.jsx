@@ -8,19 +8,44 @@ import StatisticPage from "./pages/Statistics";
 import CurrencyPage from "./pages/CurrencyPage";
 import { useMediaQuery, useTheme } from "@mui/material";
 import NotFound from "./pages/NotFound";
+import PrivateRoute from "./components/Route/PrivateRoute";
 
 function App() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/transactions" element={<TransactionsPage />} />
-        <Route path="/statistics" element={<StatisticPage />} />
-        {isMobile && <Route path="/currency" element={<CurrencyPage />} />}
+        <Route
+          path="/transactions"
+          element={
+            <PrivateRoute>
+              <TransactionsPage />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/statistics"
+          element={
+            <PrivateRoute>
+              <StatisticPage />
+            </PrivateRoute>
+          }
+        />
+        {isMobile && (
+          <Route
+            path="/currency"
+            element={
+              <PrivateRoute>
+                <CurrencyPage />
+              </PrivateRoute>
+            }
+          />
+        )}
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </>

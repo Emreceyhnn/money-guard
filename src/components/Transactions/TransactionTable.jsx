@@ -175,7 +175,7 @@ export default function TransactionsTable() {
                 <CellBox justifyContent="flex-end" gap={1}>
                   <IconButton
                     size="small"
-                    sx={{ color: "#020202ff" }}
+                    sx={{ color: "#fff" }}
                     onClick={() => {
                       setSelectedTx(item);
                       setEditModal(true);

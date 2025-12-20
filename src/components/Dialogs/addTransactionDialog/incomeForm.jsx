@@ -119,6 +119,11 @@ export default function IncomeForm({ onClose }) {
                   "& .MuiFilledInput-underline:after": {
                     borderBottomColor: "#fff",
                   },
+                  "& input::-webkit-calendar-picker-indicator": {
+                    filter: "invert(1)",
+                    opacity: 1,
+                    cursor: "pointer",
+                  },
                 }}
               />
             </Stack>
