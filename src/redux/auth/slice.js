@@ -1,0 +1,64 @@
+import {
+  loginThunk,
+  logoutThunk,
+  refreshThunk,
+  signUpThunk,
+} from "./operations";
+
+import { createSlice, isAnyOf } from "@reduxjs/toolkit";
+
+const pending = (state, action) => {
+  state.loading = true;
+  state.error = "";
+};
+
+const rejected = (state, action) => {
+  state.loading = false;
+  state.error = action.payload;
+};
+
+const initialState = {
+  user: {
+    name: "",
+    email: "",
+  },
+  token: "",
+  error: null,
+  loading: false,
+  isLoggedIn: false,
+  isRefreshing: true,
+};
+
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      .addCase(logoutThunk.fulfilled, () => ({ ...initialState }))
+      .addCase(logoutThunk.rejected, () => ({ ...initialState }))
+      .addCase(refreshThunk.pending, (state) => {
+        state.isRefreshing = true;
+      })
+      .addCase(refreshThunk.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoggedIn = true;
+        state.isRefreshing = false;
+      })
+      .addCase(refreshThunk.rejected, (state) => {
+        state.isRefreshing = false;
+      })
+      .addMatcher(
+        isAnyOf(loginThunk.fulfilled, signUpThunk.fulfilled),
+        (state, { payload }) => {
+          state.user = payload.user;
+          state.token = payload.token;
+          state.isLoggedIn = true;
+          state.loading = false;
+        }
+      )
+      .addMatcher(isAnyOf(loginThunk.pending, signUpThunk.pending), pending)
+      .addMatcher(isAnyOf(loginThunk.rejected, signUpThunk.rejected), rejected);
+  },
+});
+
+export const authReducer = authSlice.reducer;
