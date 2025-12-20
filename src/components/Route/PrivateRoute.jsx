@@ -12,7 +12,6 @@ export default function PrivateRoute({ children }) {
   }, [dispatch]);
 
   const isLoggedIn = useSelector(selectLoggedIn);
-  console.log(isLoggedIn);
 
   if (!isLoggedIn) {
     return <Navigate to="/login" replace />;
