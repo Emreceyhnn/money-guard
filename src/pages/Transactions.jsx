@@ -1,8 +1,8 @@
 import { Box, Button, Stack } from "@mui/material";
 import Header from "../components/Header";
-import Dbg from "../img/Desktop/transactions-d.png";
-import Tbg from "../img/Tablet/transactions-t.png";
-import Mbg from "../img/Mobile/transactions-m.png";
+import Dbg from "../img/Desktop/transactions-d.webp";
+import Tbg from "../img/Tablet/transactions-t.webp";
+import Mbg from "../img/Mobile/transactions-m.webp";
 import Indicators from "../components/Currency/Indicators";
 import TransactionsTable from "../components/Transactions/TransactionTable";
 import AddTransactionDialog from "../components/Dialogs/addTransactionDialog/AddTransactions";

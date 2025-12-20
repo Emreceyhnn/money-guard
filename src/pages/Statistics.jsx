@@ -1,9 +1,9 @@
 import { Box, Stack } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Header from "../components/Header";
-import Dbg from "../img/Desktop/transactions-d.png";
-import Tbg from "../img/Tablet/transactions-t.png";
-import Mbg from "../img/Mobile/transactions-m.png";
+import Dbg from "../img/Desktop/transactions-d.webp";
+import Tbg from "../img/Tablet/transactions-t.webp";
+import Mbg from "../img/Mobile/transactions-m.webp";
 import Indicators from "../components/Currency/Indicators";
 import StatisticsPage from "../components/Statistics/Statistics";
 

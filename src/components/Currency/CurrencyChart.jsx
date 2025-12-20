@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
-import img from "../../img/Desktop/currencyTab.png";
+import img from "../../img/Desktop/currencyTab.webp";
 
 export default function CurrencyChart({ eur, usd }) {
   return (

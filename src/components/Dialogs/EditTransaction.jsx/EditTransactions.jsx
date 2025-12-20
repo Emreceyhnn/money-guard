@@ -1,4 +1,4 @@
-import dbg from "../../../img/Desktop/dialog-d.png";
+import dbg from "../../../img/Desktop/dialog-d.webp";
 import {
   Dialog,
   DialogContent,

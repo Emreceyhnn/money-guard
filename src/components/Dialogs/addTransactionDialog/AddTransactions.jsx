@@ -1,6 +1,6 @@
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
-import dbg from "../../../img/Desktop/dialog-d.png";
+import dbg from "../../../img/Desktop/dialog-d.webp";
 import {
   Box,
   Button,

@@ -7,7 +7,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import dbg from "../../../img/Desktop/dialog-d.png";
+import dbg from "../../../img/Desktop/dialog-d.webp";
 import logo from "../../../img/Money-Guard-2.svg";
 import { StyledFadeButton, StyledWhiteButton } from "../../../lib/styled";
 import { logoutThunk } from "../../../redux/auth/operations";
