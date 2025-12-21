@@ -30,7 +30,7 @@ export default function RegisterPage() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/", { replace: true });
+      navigate("/transactions", { replace: true });
     }
   }, [isLoggedIn, navigate]);
 

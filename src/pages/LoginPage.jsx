@@ -25,7 +25,7 @@ export default function LoginPage() {
   /* -------------------------------- lifecycle ------------------------------- */
   useEffect(() => {
     if (isLoggedIn) {
-      navigate("/", { replace: true });
+      navigate("/transactions", { replace: true });
     }
   }, [isLoggedIn, navigate]);
 
