@@ -6,8 +6,10 @@ export const selectCurrencyError = (state) => state.currency.error;
 
 export const selectUsdEurToUah = createSelector(
   [selectCurrencyItems],
-  (items = []) =>
-    items
+  (items) => {
+    if (!Array.isArray(items)) return [];
+
+    return items
       .filter(
         (currency) =>
           (currency.currencyCodeA === 840 && currency.currencyCodeB === 980) || // USD → UAH
@@ -18,5 +20,6 @@ export const selectUsdEurToUah = createSelector(
         buy: currency.rateBuy ?? null,
         sell: currency.rateSell ?? null,
         cross: currency.rateCross ?? null,
-      }))
+      }));
+  }
 );
