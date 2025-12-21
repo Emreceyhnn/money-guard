@@ -1,6 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { getCurrencyDataFromLocalStorage } from "../../lib/helper";
+import {
+  getCurrencyDataFromLocalStorage,
+  setDataToLocalStorage,
+} from "../../lib/helper";
 
 export const connectionsApi = axios.create({
   baseURL: "/api/",
@@ -13,6 +16,7 @@ export const fetchCurrency = createAsyncThunk(
       const storedData = getCurrencyDataFromLocalStorage();
       if (storedData) return storedData;
       const { data } = await connectionsApi.get("currency");
+      setDataToLocalStorage(data);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
