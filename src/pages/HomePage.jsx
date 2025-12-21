@@ -12,12 +12,10 @@ export default function HomePage() {
   const isLoggedIn = useSelector(selectLoggedIn);
   const isRefreshing = useSelector(selectRefresh);
 
-  // Token refresh
   useEffect(() => {
     dispatch(refreshThunk());
   }, [dispatch]);
 
-  // 🔥 LOGGED IN → /transactions
   useEffect(() => {
     if (isRefreshing) return;
 
@@ -37,7 +35,6 @@ export default function HomePage() {
         color: "#fff",
       }}
     >
-      {/* HERO */}
       <Stack
         minHeight="70vh"
         justifyContent="center"
