@@ -3,8 +3,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export default function StatisticChart({ data = [], categoryColors = {} }) {
-  if (!data.length) return null;
+export default function StatisticChart({ data, categoryColors }: any) {
+  if (!data?.length) return null;
 
   const chartData = {
     labels: data.map((item) => item.name),

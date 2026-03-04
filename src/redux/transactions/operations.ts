@@ -65,7 +65,7 @@ export const UpdateTransactionThunk = createAsyncThunk(
 
 export const getMonthlySummarizer = createAsyncThunk(
   "transactions/getMonthlySummarizer",
-  async ({ month, year }, { rejectWithValue, getState }) => {
+  async ({ month, year }: { month: number; year: number }, { rejectWithValue, getState }: any) => {
     try {
       const token = getState().auth.token;
       setToken(token);
