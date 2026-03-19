@@ -1,48 +1,53 @@
-/* ---- RESET ---- */
-*,
-*::before,
-*::after {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #4A56E2 0%, #312E81 100%);
+  --secondary-gradient: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+  --dark-bg: #0F172A;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --accent-gold: #FFB627;
+  --indigo-primary: #3E2F84;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---- HTML & BODY ---- */
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
-/* ---- BODY ---- */
 body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  background-color: #242424;
-  color: rgba(255, 255, 255, 0.87);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---- LINKS ---- */
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: none;
+#root {
+  min-height: 100vh;
 }
 
-a:hover {
-  color: #535bf2;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
 
-/* ---- BUTTON ---- */
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-family: inherit;
-  cursor: pointer;
-  background-color: #1a1a1a;
-}
